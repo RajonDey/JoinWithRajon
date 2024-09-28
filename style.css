@@ -25,13 +25,27 @@ section {
   width: 100%;
 } */
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1% 0%;
+  border-bottom: 0px solid transparent !important;
+  background: #ffffff;
+  z-index: 999;
+}
+header img {
+  margin: 0 auto;
+}
+
 .row {
   width: 100%;
 }
 
 .sections-wrapper {
   /* scroll-snap-type: y mandatory; */
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   height: 100vh;
 }
 
@@ -43,6 +57,12 @@ section {
   align-items: center;
   /* scroll-snap-align: start; */
   padding: 2rem;
+}
+@media (max-width: 767.98px) {
+  section {
+    height: auto;
+    padding: 30% 0%;
+  }
 }
 
 section {
