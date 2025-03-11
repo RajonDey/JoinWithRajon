@@ -1,27 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rajon Dey - Digital Creator</title>
-    <meta
-      name="description"
-      content="Discover Rajon Dey's universe of code, music, and ideas. Connect with me across the web!"
-    />
-    <meta property="og:title" content="Rajon Dey - Digital Creator" />
-    <meta
-      property="og:description"
-      content="Discover Rajon Dey's universe of code, music, and ideas. Connect with me across the web!"
-    />
-    <meta
-      property="og:image"
-      content="https://rajondey.com/wp-content/uploads/2021/07/rajon-dey.jpg"
-    />
+    <title>Rajon Dey - Software Developer, Music & Tech Insights</title>
+    <meta name="description" content="Explore Rajon Dey's expertise in software development, music, and tech insights. Subscribe to newsletters and connect on GitHub, LinkedIn, and more!" />
+    <meta name="keywords" content="Rajon Dey, software developer, React, Next.js, Node.js, tech newsletter, music, GitHub, LinkedIn" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Rajon Dey - Software Developer & Creator" />
+    <meta property="og:description" content="Discover Rajon Dey's work in coding, music, and tech. Subscribe to newsletters and connect across platforms!" />
+    <meta property="og:image" content="https://www.rajondey.com/wp-content/uploads/2021/07/rajon-dey.jpg.webp" />
+    <meta property="og:url" content="https://yourdomain.com/this-page" />
+    <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Rajon Dey",
+          "jobTitle": "Software Developer",
+          "url": "https://yourdomain.com/this-page",
+          "sameAs": [
+              "https://www.linkedin.com/in/rajondey",
+              "https://github.com/RajonDey",
+              "https://twitter.com/rajjon_dey",
+              "https://www.instagram.com/rajjon.dey/",
+              "https://soundcloud.com/rajondey",
+              "https://www.youtube.com/@rajon_dey"
+          ],
+          "image": "https://www.rajondey.com/wp-content/uploads/2021/07/rajon-dey.jpg.webp",
+          "description": "Software developer specializing in React, Next.js, and Node.js, with a passion for music and tech insights."
+      }
+    </script>
     <style>
       * {
         margin: 0;
@@ -36,7 +45,13 @@
         line-height: 1.6;
         overflow-x: hidden;
       }
-
+      .intro {
+          padding: 2rem 0;
+          text-align: center;
+      }
+      .intro a{
+        color: #ff6200;
+      }
       /* Sidebar */
       .sidebar {
         position: fixed;
@@ -51,11 +66,16 @@
         z-index: 1000;
       }
 
+      .sidebar h1 {
+          font-size: x-large;
+          margin-bottom: 20px;
+      }
+
       .sidebar img {
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        margin-bottom: 1.5rem;
+        margin-bottom: .5rem;
         border: 2px solid #ff6200;
         object-fit: cover;
       }
@@ -213,22 +233,23 @@
     </style>
   </head>
   <body>
-    <aside class="sidebar">
-      <img
-        src="https://www.rajondey.com/wp-content/uploads/2021/07/rajon-dey.jpg.webp"
-        alt="Rajon Dey"
-      />
-      <nav>
-        <a href="#newsletters" class="active">Newsletters</a>
-        <a href="#professional">Professional</a>
-        <a href="#personal">Personal</a>
-        <a href="#music">Music</a>
-        <a href="#blog">Blog</a>
-        <a href="#youtube">YouTube</a>
-      </nav>
-    </aside>
+    <header class="sidebar">
+        <img src="https://www.rajondey.com/wp-content/uploads/2021/07/rajon-dey.jpg.webp" alt="Rajon Dey - Software Developer and Musician">
+        <h1>Rajon Dey</h1>
+        <nav>
+            <a href="#newsletters" class="active">Newsletters</a>
+            <a href="#professional">Professional</a>
+            <a href="#personal">Personal</a>
+            <a href="#music">Music</a>
+            <a href="#blog">Blog</a>
+            <a href="#youtube">YouTube</a>
+        </nav>
+    </header>
 
     <main>
+      <div class="container intro">
+            <p>Welcome to Rajon Dey's digital hub! I’m a software developer specializing in React, Next.js, and Node.js, passionate about music, and sharing tech insights via newsletters and blogs. Connect with me below or visit my <a href="https://www.rajondey.com" rel="noopener noreferrer" target="_blank">Website </a>.</p>
+        </div>
       <section id="newsletters">
         <div class="container">
           <h2 class="section-title">Newsletters</h2>
