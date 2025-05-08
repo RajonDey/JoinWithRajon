@@ -30,13 +30,10 @@
     <meta name="twitter:creator" content="@rajjon_dey" />
     <!-- External Resources -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
-
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
     <!-- Umami Website Tracker -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="9ac68093-2300-47ad-9ce9-517a158b9c3a"></script>
-
     <script type="application/ld+json">
       {
           "@context": "https://schema.org",
@@ -206,26 +203,20 @@
                 <h2 class="section-title">YouTube</h2>
                 <p>Visual stories & lessons</p>
                 <div class="content-grid">
-                  <div class="card">
-                      <a href="https://www.youtube.com/@rajon_dey" target="_blank" rel="noopener noreferrer" lang="en">
-                          <i class="bi bi-youtube"></i>
-                          Development
-                      </a>
-                  </div>
-                  <div class="card">
-                      <a href="https://www.youtube.com/@rajjondey" target="_blank" rel="noopener noreferrer" lang="en">
-                          <i class="bi bi-youtube"></i>
-                          Music
-                      </a>
-                  </div>
-              </div>
+                    <div class="card">
+                        <a href="https://www.youtube.com/@rajon_dey" target="_blank" rel="noopener noreferrer" lang="en">
+                            <i class="bi bi-youtube"></i>Development
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.youtube.com/@rajjondey" target="_blank" rel="noopener noreferrer" lang="en">
+                            <i class="bi bi-youtube"></i>Music
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
-    <!-- <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="bi bi-arrow-up"></i>
-    </a> -->
 
     <script defer>
       // Dynamic Greeting
@@ -241,13 +232,18 @@
       // Dynamic Copyright Year
       document.getElementById("copyright-year").textContent = new Date().getFullYear();
 
-      // Sidebar navigation active state
+      // Smooth Scrolling for Sidebar Navigation
       document.querySelectorAll(".sidebar nav a").forEach((link) => {
-        link.addEventListener("click", function () {
-          document
-            .querySelectorAll(".sidebar nav a")
-            .forEach((l) => l.classList.remove("active"));
+        link.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default anchor jump
+          document.querySelectorAll(".sidebar nav a").forEach((l) => l.classList.remove("active"));
           this.classList.add("active");
+          
+          const targetId = this.getAttribute("href").substring(1); // Get section ID
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
         });
       });
 
@@ -261,7 +257,7 @@
             }
           });
         },
-        { threshold: 0.2 }
+        { threshold: 0.3, rootMargin: "0px 0px -100px 0px" }
       );
 
       sections.forEach((section) => observer.observe(section));
@@ -296,16 +292,6 @@
       document.body.setAttribute("data-theme", savedTheme);
       updateThemeIcon(savedTheme);
 
-      // Back to Top Button
-      // const backToTop = document.getElementById("backToTop");
-      // window.addEventListener("scroll", () => {
-      //   if (window.scrollY > 300) {
-      //     backToTop.classList.add("visible");
-      //   } else {
-      //     backToTop.classList.remove("visible");
-      //   }
-      // });
-
       // Register Service Worker
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -319,4 +305,5 @@
         });
       }
     </script>
+</body>
 </html>
