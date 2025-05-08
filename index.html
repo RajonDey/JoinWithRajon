@@ -223,9 +223,9 @@
         </section>
     </main>
 
-    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <!-- <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="bi bi-arrow-up"></i>
-    </a>
+    </a> -->
 
     <script defer>
       // Dynamic Greeting
@@ -297,14 +297,14 @@
       updateThemeIcon(savedTheme);
 
       // Back to Top Button
-      const backToTop = document.getElementById("backToTop");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          backToTop.classList.add("visible");
-        } else {
-          backToTop.classList.remove("visible");
-        }
-      });
+      // const backToTop = document.getElementById("backToTop");
+      // window.addEventListener("scroll", () => {
+      //   if (window.scrollY > 300) {
+      //     backToTop.classList.add("visible");
+      //   } else {
+      //     backToTop.classList.remove("visible");
+      //   }
+      // });
 
       // Register Service Worker
       if ('serviceWorker' in navigator) {
