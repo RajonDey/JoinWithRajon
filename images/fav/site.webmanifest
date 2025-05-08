@@ -1,0 +1,27 @@
+{
+  "name": "Rajon Dey - Connect",
+  "short_name": "Rajon Dey",
+  "description": "Connect with Rajon Dey on social media, newsletters, and platforms for tech, music, and insights.",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/images/fav/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/fav/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/fav/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ff6200",
+  "background_color": "#1a1a1a",
+  "display": "standalone"
+}
